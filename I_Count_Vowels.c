@@ -9,7 +9,7 @@ int main(){
     fgets(s, sizeof(s), stdin);
     int length = strlen(s);
     int count=0;
-    int vowel = Count_Vowel(s,length,1);
+    // int vowel = Count_Vowel(s,length,1);
      for(int i=0; i<length; i++){
         if(s[i]== 'a' || s[i]=='A')
         {
@@ -33,5 +33,5 @@ int main(){
         }
     }
    
-    printf("%d", vowel);
+    printf("%d", count);
 }
