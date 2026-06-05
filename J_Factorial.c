@@ -1,10 +1,18 @@
-#include<stdio.h>
-int main(){
-    int n;
-    scanf("%d", &n);
-    int fac=0;
-    for(int i=1; i<=n; i++){
-        fac =i*fac;
+#include <stdio.h>
+
+long long int Factorial(int n)
+{
+    if (n == 1)
+    {
+        return 1;
     }
-    printf("%d", fac);
+    long long int mul = Factorial(n - 1);
+    return n * mul;
+}
+int main()
+{
+    long long int n;
+    scanf("%lld", &n);
+    long long int result = Factorial(n);
+    printf("%lld", result);
 }
