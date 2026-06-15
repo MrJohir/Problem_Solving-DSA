@@ -9,16 +9,14 @@ int main()
     {
         cin >> a[i];
     }
-
-    for (int i = 0; i < n / 2; i++)
-    {
-        swap(a[i], a[n - 1 - i]);
-    }
-
+    // int max = *max_element(a, a + n);
+    // cout << max;
+    int mx = INT_MIN;
     for (int i = 0; i < n; i++)
     {
-        cout << a[i] << " ";
+        mx = max(a[i], mx);
     }
+    cout << mx;
 
     return 0;
 }
